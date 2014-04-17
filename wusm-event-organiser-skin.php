@@ -4,7 +4,7 @@ Plugin Name: WUSM Event Organiser Skin
 Plugin URI: 
 Description: WUSM skin for Event Organiser calendar plugin
 Author: Brian H. Marston
-Version: 2014.04.16.0
+Version: 2014.04.17.0
 Author URI: http://medicine.wustl.edu/
 */
 
@@ -63,8 +63,6 @@ class wusm_event_organiser_skin_plugin {
         add_filter( 'eventorganiser_event_tooltip', array( $this, 'wusm_event_organiser_skin_tooltip' ) );
         // Need to set the priority to beat the Event Organiser plugin to the punch
         add_filter( 'template_include', array( $this, 'get_calendar_template' ), 5 );
-
-        update_option('')
     }
 
 	function wusm_event_organiser_skin_enqueue() {
